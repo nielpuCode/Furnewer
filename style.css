@@ -1,0 +1,575 @@
+* {
+  font-family: "Poppins", sans-serif;
+  cursor: default;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #666666;
+}
+header nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  align-items: center;
+  color: white;
+}
+header nav label {
+  background: none;
+}
+header nav h1 {
+  font-weight: 800;
+  font-size: 40px;
+  cursor: pointer;
+  background: none;
+  color: #27bce6;
+  text-shadow: 0 0 40px #27bce6;
+  margin-left: 50px;
+}
+header nav ul li {
+  display: inline-block;
+  margin: 0 40px;
+  cursor: pointer;
+}
+@media (min-width: 1000px) {
+  header nav ul li:hover {
+    color: #27bce6;
+  }
+}
+header nav input {
+  display: none;
+}
+@media (max-width: 1000px) {
+  header nav {
+    margin: 0;
+  }
+  header nav ul {
+    margin: 0 10px;
+  }
+  header nav ul li {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 755px) {
+  header {
+    margin: 0;
+  }
+  header nav ul {
+    position: absolute;
+    top: -100%; /* Change this to 0 */
+    min-width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #002029;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.5s;
+    z-index: 12;
+  }
+  header nav #check:checked ~ ul {
+    top: 85px;
+  }
+  header nav #check:checked ~ label h1 {
+    color: white;
+  }
+  header nav ul li {
+    display: block;
+    margin: 20px 0;
+    font-weight: 800;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  header nav ul li:hover {
+    background-color: #27bce6;
+  }
+}
+main .content1 {
+  position: relative;
+  background-image: url("content1.jpeg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .content1::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+main .inside-content1 {
+  position: relative;
+  background: none;
+  width: 90%;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  color: white;
+}
+main .inside-content1 h1 {
+  background: none;
+  font-size: 4em;
+}
+main .inside-content1 p {
+  text-align: center;
+  margin: 0 auto;
+  background: none;
+  width: 70%;
+  font-style: italic;
+}
+@media (max-width: 300px) {
+  main .inside-content1 h1 {
+    font-size: 2em !important;
+  }
+}
+main .inside-content1 button {
+  background-color: #27bce6;
+  border: none;
+  border-radius: 25px;
+  margin-top: 80px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+@media (max-width: 855px) {
+  main .inside-content1 h1 {
+    font-size: 3em;
+  }
+  main .inside-content1 p {
+    font-size: smaller;
+  }
+}
+main .content2 {
+  margin: 150px auto;
+  width: 100%;
+}
+main .content2 .detailJob {
+  margin: auto;
+  width: 80%;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+main .content2 .detailJob .list-detailJob {
+  background-color: #002029;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #002029;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  font-size: 130%;
+  flex-shrink: 0;
+  margin: 10px;
+}
+main .content2 .detailJob .list-detailJob span {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 40px;
+  text-shadow: 0 0 20px white;
+}
+main .content2 .detailJob .list-detailJob p {
+  font-size: small;
+}
+@media (max-width: 700px) {
+  main .content2 {
+    width: 100%;
+  }
+  main .content2 .detailJob {
+    width: 100%;
+  }
+  main .content2 .detailJob .list-detailJob span {
+    margin-top: 25px;
+  }
+}
+main .content3 {
+  border: 2px solid #146277;
+  margin: 150px 0;
+  background-color: #146277;
+}
+main .content3 h1 {
+  font-size: 35px;
+  text-align: center;
+  margin: 30px auto;
+  color: white;
+}
+main .content3 .detailCategories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+main .content3 .detailCategories .list-detailCategories {
+  background-color: white;
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px #27bce6;
+  text-align: center;
+  font-weight: 800;
+  margin: 10px;
+}
+main .content3 .detailCategories .list-detailCategories img {
+  height: 70%;
+}
+main .content4 {
+  margin: 150px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+}
+main .content4 article {
+  width: 50%;
+  padding: 40px;
+  text-align: justify;
+}
+main .content4 article p {
+  font-size: 15px;
+}
+main .content4 article .checklist {
+  margin: 40px auto;
+}
+main .content4 article .checklist h1 {
+  margin: 10px;
+}
+main .content4 article .checklist h1 i {
+  color: #27bce6;
+}
+main .content4 aside {
+  height: 400px;
+  width: 400px;
+  text-align: center;
+}
+main .content4 aside img {
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px black;
+}
+@media (max-width: 900px) {
+  main .content4 {
+    flex-wrap: wrap-reverse;
+    width: 90%;
+    padding: 0;
+    position: relative;
+    background-image: url("https://img.freepik.com/free-photo/pillow-sofa-decoration-luxury-livingroom-interior_1339-4974.jpg?w=740&t=st=1694926129~exp=1694926729~hmac=75dbde0a7e04ecaaf2519c7d5ea82c00655eba7b002b2fc5e4d879ae4373088a");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    min-height: 100vh;
+    border-radius: 30px;
+  }
+  main .content4::before {
+    border-radius: 30px;
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  main .content4 article {
+    position: relative;
+    color: white;
+    text-align: left;
+    padding: 10px !important;
+    width: 95%;
+    height: 100%;
+    padding: 0;
+  }
+  main .content4 article h1 {
+    text-align: center;
+  }
+  main .content4 article .checklist h1 i {
+    display: block;
+  }
+  main .content4 aside {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  main .content4 article p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+}
+main .content5 {
+  width: 85%;
+  text-align: justify;
+  margin: 150px auto;
+  background-color: #002029;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .content5 .detail-content5 {
+  padding: 20px;
+  width: 100%;
+}
+main .content5 .detail-content5 h1 {
+  text-align: center;
+  text-shadow: 0 0 20px white;
+}
+main .content5 .detail-content5 p {
+  margin: 30px auto;
+  font-size: 15px;
+}
+main .content5 .detail-content5 button {
+  border-radius: 15px;
+  background-color: #27bce6;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 20px auto;
+  border: none;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+main .content5 img {
+  box-shadow: 0 0 40px 10px #27bce6;
+  width: 45%;
+  height: 100%;
+  margin: 25px;
+  border-radius: 100px;
+}
+@media (max-width: 1000px) {
+  main .content5 {
+    position: relative;
+    background-image: url("content5.jpeg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    min-height: 100vh;
+    border-radius: 30px;
+  }
+  main .content5::before {
+    border-radius: 30px;
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  main .content5 .detail-content5 {
+    position: relative;
+  }
+  main .content5 .detail-content5 h1 {
+    font-size: 2em;
+  }
+  main .content5 img {
+    display: none;
+  }
+}
+main .content6 {
+  border-radius: 20px;
+  width: 85%;
+  margin: 150px auto;
+}
+main .content6 h1 {
+  font-size: 60px;
+  text-align: center;
+  background: none;
+}
+main .content6 .detailReviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  border-radius: 25px;
+  scroll-snap-type: x mandatory;
+}
+main .content6 .detailReviews .list-detailReviews {
+  border-radius: 25px;
+  background-color: #146277;
+  margin: 20px;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  padding: 40px;
+  color: white;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+main .content6 .detailReviews .list-detailReviews #starsReview {
+  text-shadow: 0 0 20px white;
+  margin: 5px auto;
+}
+@media (max-width: 550px) {
+  main .content6 .detailReviews .list-detailReviews {
+    max-width: 200px;
+    height: 300px;
+  }
+}
+@media (max-width: 330px) {
+  main .content6 .detailReviews .list-detailReviews {
+    max-width: 150px;
+    height: 300px;
+  }
+}
+main .content7 {
+  margin: 150px auto;
+  width: 75%;
+  position: relative;
+  background-image: url("https://img.freepik.com/free-psd/realistic-white-sofa-mockup-with-table_176382-545.jpg?w=1480&t=st=1694927583~exp=1694928183~hmac=cfcba1c50293c0a38d1206e1ac002905c65d220178de455a23a0251b38d9308a");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  min-height: 55vh;
+  padding: 10px;
+  border-radius: 25px;
+}
+main .content7::before {
+  border-radius: 25px;
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+main .content7 .detail-content7 {
+  position: relative;
+  background: none;
+  margin: 70px 10px;
+  color: white;
+}
+main .content7 .detail-content7 h1 {
+  background: none;
+  font-size: 3em;
+  text-shadow: 0 0 20px white;
+}
+main .content7 .detail-content7 p {
+  text-align: center;
+  background: none;
+  width: 70%;
+  font-style: italic;
+  font-size: 15px;
+  margin: 30px auto;
+}
+@media (max-width: 630px) {
+  main .content7 .detail-content7 h1 {
+    font-size: 1.2em;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  main .content7 .detail-content7 p {
+    font-size: 0.5em;
+  }
+}
+main .content7 .detail-content7 button {
+  background-color: #27bce6;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+}
+@media (max-width: 600px) {
+  main .content7 {
+    width: 90%;
+  }
+}
+
+footer {
+  background-color: #002029;
+  color: white;
+  margin: 0;
+  padding: 50px;
+}
+footer .footer1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+footer .footer1 button {
+  background-color: #27bce6;
+  color: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  margin: auto 10px;
+}
+footer .footer2 {
+  color: #146277;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer2 .box {
+  width: 500px;
+  margin: 20px;
+}
+footer .footer2 .box p {
+  font-size: 15px;
+}
+footer .footer2 .box h1, footer .footer2 .box h3 {
+  margin: 5px auto;
+}
+footer .footer2 .box h1 {
+  color: #27bce6;
+  text-shadow: 0 0 30px #27bce6;
+}
+
+@media (max-width: 830px) {
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20;
+  }
+  .footer1 h1 {
+    display: block;
+    margin: 20px;
+    text-align: center;
+  }
+  .footer1 button {
+    margin-top: 20px !important;
+  }
+}
+@media (max-width: 540px) {
+  .footer2 {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 !important;
+  }
+  .footer2 .box {
+    max-width: 100%;
+    margin: 10px 0 !important;
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
